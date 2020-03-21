@@ -29,7 +29,7 @@ public class MemberServiceImpl implements MemberService {
      */
     @GetMapping("/memberToWeixin")
     public String memberToWeixin(Integer userId) {
-        return "会员服务调用微信服务： " + weixinServiceFeign.appInfgo(userId);
+        return "会员服务调用微信服务： " + weixinServiceFeign.appInfo(userId);
     }
 
     @GetMapping("memberToWeixinName")
