@@ -18,4 +18,11 @@ swagger:
     email: 644064779@qq.com
     url: www.mayikt.com
   enabled: true
-
+wx:
+  mp:
+    configs:
+      - appId: wx408daee2fb0a9feb
+        secret: e7343f1734e311cb3130b435a38de9d1
+        token: mayikt
+wechat:
+  defalutMsg: 亲您的问题，我们已经知晓，稍后为您做出答复！！！
