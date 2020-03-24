@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "wx.mp",
+      "type": "com.zlp.api.weixin.mp.config.WxMpProperties",
+      "sourceType": "com.zlp.api.weixin.mp.config.WxMpProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "wx.mp.configs",
+      "type": "java.util.List<com.zlp.api.weixin.mp.config.WxMpProperties$MpConfig>",
+      "sourceType": "com.zlp.api.weixin.mp.config.WxMpProperties"
+    }
+  ],
+  "hints": []
+}
