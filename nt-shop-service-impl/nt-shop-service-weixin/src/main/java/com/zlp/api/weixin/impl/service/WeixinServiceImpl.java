@@ -1,10 +1,14 @@
 package com.zlp.api.weixin.impl.service;
 
 
+import com.zlp.api.weixin.impl.entity.WechatKeyword;
+import com.zlp.api.weixin.impl.mapper.KeywordMapper;
 import com.zlp.api.weixin.service.WeixinService;
 import com.zlp.base.BaseApiService;
 import com.zlp.base.BaseResponse;
 import org.apache.commons.lang.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +22,9 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class WeixinServiceImpl extends BaseApiService implements WeixinService {
+
+    @Autowired
+    private KeywordMapper keywordMapper;
 
     @Override
     public String appInfo(@RequestParam("userId") Integer userId) {
@@ -42,4 +49,13 @@ public class WeixinServiceImpl extends BaseApiService implements WeixinService {
     }
 
 
+    @RequestMapping("/getValue")
+    public String getValue(@RequestParam("key") String key) {
+        WechatKeyword byKeyword = keywordMapper.findByKeyword(key);
+        if (byKeyword != null) {
+            String keywordValue = byKeyword.getKeywordValue();
+            return keywordValue;
+        }
+        return "错了。。。";
+    }
 }
