@@ -61,7 +61,7 @@ public class MsgHandler extends AbstractHandler {
        /* if (content.equals("蚂蚁课堂")) {
             return new TextBuilder().build("牛逼6666", wxMessage, weixinService);
         }
-        if (content.equals("张立佩")) {
+        if (content.equals("神兽")) {
             return new TextBuilder().build("男，汉族，中国国籍，1988年8月8日出生，主要从事互联网Java架构师培训学员。", wxMessage, weixinService);
         }*/
         return new TextBuilder().build(defalutMsg, wxMessage, weixinService);

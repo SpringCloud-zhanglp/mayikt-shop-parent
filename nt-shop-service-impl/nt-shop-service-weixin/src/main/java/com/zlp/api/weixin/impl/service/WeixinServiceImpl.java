@@ -25,7 +25,6 @@ public class WeixinServiceImpl extends BaseApiService implements WeixinService {
 
     @Autowired
     private KeywordMapper keywordMapper;
-
     @Override
     public String appInfo(@RequestParam("userId") Integer userId) {
         return "微信接口" + userId;
@@ -46,6 +45,16 @@ public class WeixinServiceImpl extends BaseApiService implements WeixinService {
         }
 
         return setResultSuccess("蚂蚁课堂牛。。");
+    }
+
+    @RequestMapping("/getValue")
+    public String getValue (@RequestParam("key") String key){
+        WechatKeyword byKeyword = keywordMapper.findByKeyword(key);
+        if (byKeyword!=null) {
+            String keywordValue = byKeyword.getKeywordValue();
+            return keywordValue;
+        }
+        return "出错了。。。。";
     }
 
 
