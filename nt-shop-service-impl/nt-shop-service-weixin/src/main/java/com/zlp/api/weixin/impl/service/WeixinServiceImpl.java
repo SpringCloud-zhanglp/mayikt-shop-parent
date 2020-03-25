@@ -57,14 +57,4 @@ public class WeixinServiceImpl extends BaseApiService implements WeixinService {
         return "出错了。。。。";
     }
 
-
-    @RequestMapping("/getValue")
-    public String getValue(@RequestParam("key") String key) {
-        WechatKeyword byKeyword = keywordMapper.findByKeyword(key);
-        if (byKeyword != null) {
-            String keywordValue = byKeyword.getKeywordValue();
-            return keywordValue;
-        }
-        return "错了。。。";
-    }
 }
