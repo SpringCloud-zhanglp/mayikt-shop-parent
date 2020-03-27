@@ -31,3 +31,4 @@ wx:
         token: mayikt
 wechat:
   defalutMsg: 亲您的问题，我们已经知晓，稍后为您做出答复！！！
+  rpcWeatherUrl: https://api.seniverse.com/v3/weather/now.json?key=S2f6L62SpD0ivVO6j&location=####&language=zh-Hans&unit=c

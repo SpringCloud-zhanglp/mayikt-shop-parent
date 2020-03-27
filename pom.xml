@@ -13,6 +13,7 @@
         <module>nt-shop-service-impl</module>
         <module>nt-shop-service-base</module>
         <module>nt-shop-basics</module>
+        <module>nt-shop-common</module>
     </modules>
 
     <parent>
