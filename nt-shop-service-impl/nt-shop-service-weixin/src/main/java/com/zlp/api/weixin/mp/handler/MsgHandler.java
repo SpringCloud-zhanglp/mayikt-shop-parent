@@ -56,14 +56,14 @@ public class MsgHandler extends AbstractHandler {
         WechatKeyword byKeyword = keywordMapper.findByKeyword(content);
         if (byKeyword!=null) {
             String keywordValue = byKeyword.getKeywordValue();
-            return new TextBuilder().build(keywordValue,wxMessage,weixinService);
+            return new TextBuilder().build(keywordValue, wxMessage, weixinService);
         }
-       /* if (content.equals("蚂蚁课堂")) {
+        if (content.equals("发财")) {
             return new TextBuilder().build("牛逼6666", wxMessage, weixinService);
         }
         if (content.equals("神兽")) {
             return new TextBuilder().build("男，汉族，中国国籍，1988年8月8日出生，主要从事互联网Java架构师培训学员。", wxMessage, weixinService);
-        }*/
+        }
         return new TextBuilder().build(defalutMsg, wxMessage, weixinService);
 
     }
